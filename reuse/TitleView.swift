@@ -19,6 +19,12 @@ class TitleView: UIView {
         titleSetup()
     }
     
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        titleSetup()
+        contentView?.prepareForInterfaceBuilder()
+    }
+    
     func titleSetup() {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
