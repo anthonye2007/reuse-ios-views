@@ -9,8 +9,9 @@
 import UIKit
 
 @IBDesignable
-class TitleView: UIView {
+class SubtitleView: UIView {
 
+    @IBOutlet weak var subtitleLabel: UILabel!
     var contentView: UIView?
     @IBInspectable var nibName: String?
     

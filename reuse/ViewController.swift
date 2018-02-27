@@ -10,16 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topView: SubtitleView!
+    @IBOutlet weak var bottomView: SubtitleView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        topView.subtitleLabel.text = "Top"
+        bottomView.subtitleLabel.text = "Bottom"
     }
-
-
 }
 
